@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 10%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+strong {
+  color: black;
+}
+
+strong:hover {
+  color: var(--blue);
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  color: var(--dark-grayish-blue);
+  background-color: var(--very-light-grayish-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mark-all {
+  cursor: pointer;
+}
+
+.blue {
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.blue:hover {
+  color: var(--blue);
+}
+
+.unread {
+  background-color: var(--very-light-grayish-blue);
+  cursor: pointer;
+}
+
+.unread p::after {
+  background-color: var(--red);
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  margin-left: 3px;
+}
+
+.highlighted {
+  font-weight: 800;
+  color: var(--dark-grayish-blue);
+}
+
+.notif-page {
+  padding: 1.5rem 1rem;
+  background-color: var(--white);
+  max-width: 600px;
+}
+
+.notif-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h3 {
+  color: var(--very-dark-blue);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.heading span {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.notif-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notification {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.notification img {
+  width: 40px;
+  object-fit: contain;
+}
+
+.notification .message,
+.notification .rizky .person {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.notification .rizky .content {
+  outline: 1px solid var(--light-grayish-blue-2);
+  margin-top: 1rem;
+  padding: 0.9rem;
+  border-radius: 3px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.notification .rizky .content:hover {
+  background-color: var(--Light-grayish-blue-1);
+}
+
+.notification .kimberly {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.chess {
+  cursor: pointer;
+}
+
+.notification .kimberly .time {
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
